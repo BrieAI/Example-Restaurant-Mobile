@@ -41,7 +41,7 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            margin-right: 10px;
+            margin-right: 5px;
         }
         .back-arrow {
             font-size: 18px;
@@ -59,8 +59,19 @@
         }
         iframe {
             width: 100%;
-            height: 100%;
+            height: calc(100vh - 60px); /* Default height for desktop */
             border: none;
+        }
+        
+        /* Responsive Styles for Mobile */
+        @media (max-width: 768px) {
+            .chatbot-container {
+                height: calc(100vh - 60px); /* Full height minus header */
+            }
+            iframe {
+                height: calc(90vh - 60px); /* Adjust height on mobile */
+                min-height: 600px; /* Ensure minimum height */
+            }
         }
     </style>
 </head>
