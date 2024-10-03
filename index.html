@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Restaurant Mobile Chatbot</title>
+    <title>Example Restaurant Chatbot</title>
     <style>
         body, html {
             margin: 0;
@@ -28,11 +28,11 @@
             margin: 0;
             font-size: 18px;
             text-align: center;
-            flex: 1; /* Center align title */
+            flex: 1;
         }
         .logo-container {
             position: absolute;
-            left: 15px; /* Position it on the left */
+            left: 10px;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -41,10 +41,10 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            margin-right: 5px;
+            margin-right: 10px;
         }
         .back-arrow {
-            font-size: 16px;
+            font-size: 18px;
             color: #333;
             text-decoration: none;
         }
@@ -55,6 +55,7 @@
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
+            overflow-y: hidden; /* Prevent internal scrollbars */
         }
         iframe {
             width: 100%;
@@ -66,12 +67,11 @@
 <body>
     <!-- Header Section with Logo and Back Arrow -->
     <div class="header">
-        <!-- Clickable Logo with Back Arrow -->
         <div class="logo-container" onclick="window.location.href='https://askbrie.co.uk';">
             <span class="back-arrow">←</span>
             <img src="colored_logo.png" alt="Brie Logo">
         </div>
-        <h1>Example Restaurant Mobile Chatbot</h1>
+        <h1>Example Restaurant Chatbot</h1>
     </div>
 
     <!-- Chatbot Iframe Section -->
