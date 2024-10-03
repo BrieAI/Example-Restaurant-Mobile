@@ -19,59 +19,57 @@
             justify-content: center;
             position: relative;
             background: #ffffff;
-            padding: 10px 15px;
+            padding: 5px 10px; /* Reduced padding */
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            height: 60px;
+            height: 40px; /* Shrunk header height */
             box-sizing: border-box;
         }
         .header h1 {
             margin: 0;
-            font-size: 18px;
+            font-size: 16px; /* Reduced font size */
             text-align: center;
             flex: 1;
         }
         .logo-container {
             position: absolute;
-            left: 10px;
+            left: 5px;
             display: flex;
             align-items: center;
             cursor: pointer;
         }
         .logo-container img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 5px;
+            width: 25px; /* Shrunk width */
+            height: 25px; /* Shrunk height */
+            margin-right: 3px;
         }
         .back-arrow {
-            font-size: 18px;
+            font-size: 16px; /* Reduced font size */
             color: #333;
             text-decoration: none;
         }
         .chatbot-container {
-            height: calc(100vh - 60px); /* Full height minus header */
+            height: calc(100vh - 40px); /* Full height minus header */
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
-            overflow: hidden; /* Hide overflow */
+            overflow-y: hidden; /* Prevent internal scrollbars */
         }
         iframe {
             width: 100%;
             height: 100%;
             border: none;
-            overflow-y: scroll; /* Add scroll capability */
         }
         
         /* Responsive Styles for Mobile */
         @media (max-width: 768px) {
             .chatbot-container {
-                height: calc(85vh - 60px); /* Smaller height to fit on mobile */
+                height: calc(80vh - 40px); /* Smaller height on mobile */
             }
             iframe {
-                height: calc(85vh - 60px); /* Smaller height to fit the mobile screen */
-                min-height: 500px; /* Ensure minimum height */
+                height: calc(80vh - 40px); /* Bring the height way up */
+                min-height: 400px; /* Shrunk min height */
             }
         }
     </style>
@@ -91,7 +89,7 @@
         <iframe
             src="https://www.chatbase.co/chatbot-iframe/kj9_Q0PHlXhmXatHD8h42"
             width="100%"
-            style="height: 100%; min-height: 700px; overflow-y: auto;"
+            style="height: 100%; min-height: 400px;"
             frameborder="0">
         </iframe>
     </div>
