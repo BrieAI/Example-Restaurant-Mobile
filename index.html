@@ -55,22 +55,23 @@
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
-            overflow-y: hidden; /* Prevent internal scrollbars */
+            overflow: hidden; /* Hide overflow */
         }
         iframe {
             width: 100%;
-            height: calc(100vh - 60px); /* Default height for desktop */
+            height: 100%;
             border: none;
+            overflow-y: scroll; /* Add scroll capability */
         }
         
         /* Responsive Styles for Mobile */
         @media (max-width: 768px) {
             .chatbot-container {
-                height: calc(100vh - 60px); /* Full height minus header */
+                height: calc(85vh - 60px); /* Smaller height to fit on mobile */
             }
             iframe {
-                height: calc(90vh - 60px); /* Adjust height on mobile */
-                min-height: 600px; /* Ensure minimum height */
+                height: calc(85vh - 60px); /* Smaller height to fit the mobile screen */
+                min-height: 500px; /* Ensure minimum height */
             }
         }
     </style>
@@ -90,7 +91,7 @@
         <iframe
             src="https://www.chatbase.co/chatbot-iframe/kj9_Q0PHlXhmXatHD8h42"
             width="100%"
-            style="height: 100%; min-height: 700px"
+            style="height: 100%; min-height: 700px; overflow-y: auto;"
             frameborder="0">
         </iframe>
     </div>
